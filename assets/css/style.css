@@ -14,7 +14,8 @@ body {
   color: white;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.54902), rgba(0, 0, 0, 0.54902)), url(../img/1920x1200.png);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  background-repeat: no-repeat; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: 300; }
 

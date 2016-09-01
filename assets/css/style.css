@@ -10,12 +10,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(5px);
-  color: white;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.54902), rgba(0, 0, 0, 0.54902)), url(../img/1920x1200.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
+  color: white; }
+  body::before {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.54902), rgba(0, 0, 0, 0.54902)), url(../img/1920x1200.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(5px);
+    z-index: -1; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: 300; }
 
@@ -25,18 +34,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: salmon;
     padding: 15px 30px;
-    border-radius: 3px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
     text-decoration: none;
-    color: black;
+    color: white;
     transition: 300ms padding cubic-bezier(0, 2.08, 0.44, 1.13), 300ms background ease-in-out; }
     .download a svg {
       margin-left: 5px; }
+      .download a svg path {
+        fill: white; }
     .download a:hover {
-      background: #f85441;
+      background: #ccac00;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12), 0px 0px 20px rgba(0, 0, 0, 0.12);
-      color: white;
       padding: 15px 40px; }
       .download a:hover svg path {
         fill: white; }
